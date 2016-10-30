@@ -21,3 +21,10 @@ h1 {
 	cursor: pointer; 
 	cursor: hand;
 }
+.credits {
+	margin-top: 60px;
+}
+
+.searchBtn {
+	margin-top: 10px;
+}
