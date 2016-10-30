@@ -4,17 +4,20 @@ body {
 
 h1 {
 	color: #A9A9A9;
-	margin-top: 100px;
+	margin-top: 200px;
 }
 
 #searchInput {
-	border-radius: 20px;
-	margin-top: 20px;
+	border-radius: 10px;
+	margin-top: 60px;
+	display: none;
 }
 
 #searchIcon {
 	color: #FF3B3F;
-	margin-top: 20px;
+	margin-top: 50px;
 	display: block;
 	text-align: center;
+	cursor: pointer; 
+	cursor: hand;
 }
