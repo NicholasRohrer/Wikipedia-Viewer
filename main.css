@@ -22,9 +22,19 @@ h1 {
 	cursor: hand;
 }
 .credits {
-	margin-top: 60px;
+	margin-top: 40px;
 }
 
-.searchBtn {
+.buttons {
+	display: none;
+	margin-top: 15px;
+	text-align: center;
+}
+
+#btn2 {
 	margin-top: 10px;
+}
+
+#randomLink {
+	text-decoration: none;
 }
