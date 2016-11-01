@@ -7,7 +7,7 @@ var $searchClose = $('#searchClose');
 var $buttons = $('.buttons');
 var $btn1 = $('#btn1');
 
-// toggle search bar for user
+// toggle search bar and buttons for user
 function toggleSearch() {
 	$searchInput.slideToggle(300, removeText);
 	$buttons.slideToggle(300);
@@ -21,6 +21,12 @@ function removeText() {
 function searchWikipedia() {
 	var searchTerm = $('#searchInput').val();
 	console.log(searchTerm);
+
+	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?";
+
+	$.getJSON(url, function(data) {
+		console.log(data);
+	})
 }
 
 //var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?"
