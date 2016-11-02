@@ -26,6 +26,7 @@ function searchWikipedia() {
 
 	$.getJSON(url, function(data) {
 		console.log(data);
+		console.log(data[1][0]);
 	})
 }
 
