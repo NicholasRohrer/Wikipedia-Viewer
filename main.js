@@ -29,8 +29,6 @@ function searchWikipedia() {
 	})
 }
 
-//var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?"
-
 // click magnifying glass to hide and bring up search input
 $searchIcon.on("click", toggleSearch);
 
