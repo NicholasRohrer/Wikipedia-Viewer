@@ -18,6 +18,11 @@ function removeText() {
 	$searchInput.val('');
 }
 
+function showPanels() {
+	$('.panel-group').slideDown(500);
+	
+}
+
 function searchWikipedia() {
 	var searchTerm = $('#searchInput').val();
 	console.log(searchTerm);
@@ -41,6 +46,8 @@ function searchWikipedia() {
 
 		}
 	})
+
+	showPanels();
 }
 
 // click magnifying glass to hide and bring up search input
