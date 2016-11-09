@@ -18,6 +18,11 @@ function removeText() {
 	$searchInput.val('');
 }
 
+function showPanels() {
+	$('.panel-group').slideDown(500);
+	
+}
+
 function searchWikipedia() {
 	var searchTerm = $('#searchInput').val();
 	console.log(searchTerm);
@@ -26,11 +31,24 @@ function searchWikipedia() {
 
 	$.getJSON(url, function(data) {
 		console.log(data);
-		console.log(data[1][0]);
-	})
-}
+		//console.log(data[1][0]);
 
-//var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?"
+		var x = 0;
+		var y = 0;
+
+		for (var i = 0; i < 10; i++) {
+			
+			$('#title' + x).html(data[1][x]);
+			$('#content' + y).html(data[2][y]);
+
+			x++;
+			y++;
+
+		}
+	})
+
+	showPanels();
+}
 
 // click magnifying glass to hide and bring up search input
 $searchIcon.on("click", toggleSearch);
@@ -44,4 +62,5 @@ $('#searchInput').keyup(function(event) {
 	if (event.keyCode == 13)
 		searchWikipedia();
 });
+
 
