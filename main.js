@@ -7,6 +7,9 @@ var $searchClose = $('#searchClose');
 var $buttons = $('.buttons');
 var $btn1 = $('#btn1');
 
+// url array
+var urls = [];
+
 // toggle search bar and buttons for user
 function toggleSearch() {
 	$searchInput.slideToggle(300, removeText);
@@ -20,7 +23,6 @@ function removeText() {
 
 function showPanels() {
 	$('.panel-group').slideDown(500);
-	
 }
 
 function searchWikipedia() {
