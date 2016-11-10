@@ -7,9 +7,6 @@ var $searchClose = $('#searchClose');
 var $buttons = $('.buttons');
 var $btn1 = $('#btn1');
 
-// url array
-var urls = [];
-
 // toggle search bar and buttons for user
 function toggleSearch() {
 	$searchInput.slideToggle(300, removeText);
@@ -21,10 +18,12 @@ function removeText() {
 	$searchInput.val('');
 }
 
+// shows the populated panels to the user
 function showPanels() {
 	$('.panel-group').slideDown(500);
 }
 
+// makes wikipedia API call and populates the panels
 function searchWikipedia() {
 	var searchTerm = $('#searchInput').val();
 	console.log(searchTerm);
@@ -42,6 +41,7 @@ function searchWikipedia() {
 			
 			$('#title' + x).html(data[1][x]);
 			$('#content' + y).html(data[2][y]);
+			$('#url' + x).attr("href", data[3][x]);
 
 			x++;
 			y++;

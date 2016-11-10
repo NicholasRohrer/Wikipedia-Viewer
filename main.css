@@ -41,11 +41,19 @@ h1 {
 
 .panel-body {
 	background-color: #CAEBF2;
-	opacity: 0.7
+	opacity: 0.7;
+	text-decoration: none;
 }
 
 .panel-body:hover {
 	opacity: 1.0;
+	cursor: pointer; 
+	cursor: hand;
+}
+
+#url0, #url1, #url2, #url3, #url4, #url5, #url6, #url7, #url8, #url9 {
+	text-decoration: none;
+	color: #000;
 }
 
 .panel-group {
