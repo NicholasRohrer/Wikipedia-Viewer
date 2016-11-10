@@ -25,18 +25,16 @@ function showPanels() {
 
 // makes wikipedia API call and populates the panels
 function searchWikipedia() {
-	var searchTerm = $('#searchInput').val();
-	console.log(searchTerm);
 
+	var searchTerm = $('#searchInput').val();
 	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?";
 
 	$.getJSON(url, function(data) {
-		console.log(data);
-		//console.log(data[1][0]);
 
 		var x = 0;
 		var y = 0;
 
+		// populates html elements with API data
 		for (var i = 0; i < 10; i++) {
 			
 			$('#title' + x).html(data[1][x]);
@@ -48,7 +46,7 @@ function searchWikipedia() {
 
 		}
 	})
-
+	
 	showPanels();
 }
 
@@ -59,7 +57,7 @@ $searchIcon.on("click", toggleSearch);
 $btn1.on("click", searchWikipedia);
 
 // search Wikipedia on click of enter key
-$('#searchInput').keyup(function(event) {
+$searchInput.keyup(function(event) {
 	event.preventDefault();
 	if (event.keyCode == 13)
 		searchWikipedia();
