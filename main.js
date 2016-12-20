@@ -27,27 +27,30 @@ function showPanels() {
 function searchWikipedia() {
 
 	var searchTerm = $('#searchInput').val();
-	var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?";
-
-	$.getJSON(url, function(data) {
-
-		var x = 0;
-		var y = 0;
-
-		// populates html elements with API data
-		for (var i = 0; i < 10; i++) {
-			
-			$('#title' + x).html(data[1][x]);
-			$('#content' + y).html(data[2][y]);
-			$('#url' + x).attr("href", data[3][x]);
-
-			x++;
-			y++;
-
-		}
-	})
 	
-	showPanels();
+	if (searchTerm !== "") {
+		var url = "https://en.wikipedia.org/w/api.php?action=opensearch&search="+ searchTerm +"&format=json&callback=?";
+
+		$.getJSON(url, function(data) {
+
+			var x = 0;
+			var y = 0;
+
+			// populates html elements with API data
+			for (var i = 0; i < 10; i++) {
+				
+				$('#title' + x).html(data[1][x]);
+				$('#content' + y).html(data[2][y]);
+				$('#url' + x).attr("href", data[3][x]);
+
+				x++;
+				y++;
+
+			}
+		})
+		
+		showPanels();
+	}
 }
 
 // click magnifying glass to hide and bring up search input
