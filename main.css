@@ -11,6 +11,7 @@
 #searchInput {
 	border-radius: 10px;
 	margin-top: 60px;
+	margin-bottom: 30px;
 	display: none;
 }
 
@@ -30,7 +31,7 @@
 
 .buttons {
 	display: none;
-	margin-top: 15px;
+	margin-top: 10px;
 	text-align: center;
 }
 
