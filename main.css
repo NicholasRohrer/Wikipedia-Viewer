@@ -1,12 +1,15 @@
 .body {
     background-color: #EFEFEF;
+    font-size: 16px;
 }
 
 #title {
 	color: #A9A9A9;
 	margin-top: 200px;
-	font-size: 80px;
 }
+
+#title{font-size: 6em;}
+@media(min-width: 60em){#title{font-size: 4em}}
 
 #searchInput {
 	border-radius: 10px;
@@ -21,9 +24,11 @@
 	display: block;
 	text-align: center;
 	cursor: pointer; 
-	cursor: hand;
-	font-size: 80px;	
+	cursor: hand;	
 }
+
+#searchIcon{font-size: 8em;}
+@media(min-width: 60em){#searchIcon{font-size: 4em}}
 
 .credits {
 	margin-top: 40px;
